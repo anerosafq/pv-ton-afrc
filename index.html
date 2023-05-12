@@ -301,12 +301,7 @@
             const name = document.getElementById("input-nombre").value
             const email = document.getElementById("input-email").value
             const telefono = document.getElementById("input-telefono").value
-            
-            nome_cli = nome.normalize("NFD").replace(/[\u0300-\u036f]/g, "")nome_cli = nome.replace(/\s+/g, " ").trim();
-		   
-          window.location.href = `${urlCheckout}&name=${nome_cli}&email=${email}&phone=${telefone}&src=${parametroHotmart}`
-          
-         
+            window.location.href = `${urlCheckout}&name=${name}&email=${email}&phonenumber=${telefono}&src=${parametroHotmart}`
             return false;
         }
 
